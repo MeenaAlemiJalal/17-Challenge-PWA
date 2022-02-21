@@ -123,7 +123,6 @@ function sendTransaction(isAdding) {
     }
   })
   .then(response => {   
-    console.log('post trans', response) 
     return response.json();
   })
   .then(data => {
