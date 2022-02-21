@@ -5,7 +5,8 @@ const FILES_TO_CACHE = [
   "./index.html",
   "./css/styles.css",
   "./js/index.js",
-  "./js/idb.js"
+  "./js/idb.js",
+  "./icons/icon-192x192.png"
 ];
 
 // Respond with cached resources
