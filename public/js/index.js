@@ -3,7 +3,6 @@ let myChart;
 
 fetch("/api/transaction")
   .then(response => {
-    console.log('get trans', response) 
     return response.json();
   })
   .then(data => {
@@ -17,7 +16,7 @@ fetch("/api/transaction")
 
 function populateTotal() {
   // reduce transaction amounts to a single total value
-  let total = transactions.reduce((total, t) => {
+  let total = transactions?.reduce((total, t) => {
     return total + parseInt(t.value);
   }, 0);
 
@@ -106,7 +105,7 @@ function sendTransaction(isAdding) {
   }
 
   // add to beginning of current array of data
-  transactions.unshift(transaction);
+  transactions?.unshift(transaction);
 
   // re-run logic to populate ui with new record
   populateChart();
